@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS bookish_dataBase;
+CREATE DATABASE bookish_dataBase;
+
 USE bookish_dataBase;
 
 CREATE TABLE Books(
