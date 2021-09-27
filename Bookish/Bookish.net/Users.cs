@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bookish.Net
+namespace Bookish.net
 {
-    public class Copy
+    
+    public class User
 
     {
-        public int CopyID { get; set; }
         public int UserID { get; set; }
-        public int BookID { get; set; }
-
+        public string UserName { get; set; }
     }
+    
 }
