@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="BookRepository.cs" />
+    <Compile Include="Copy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

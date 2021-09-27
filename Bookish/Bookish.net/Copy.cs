@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bookish.net
 {
-    class Class1
+    public class Class
     {
+        public int Book_ID { get; set; }
+        public string Book_Name { get; set; }
+        public string Bardcode { get; set; }
+        public int ISBN { get; set; }
+        public string Author { get; set; }
+
     }
 }
