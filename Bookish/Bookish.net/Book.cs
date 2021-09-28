@@ -8,8 +8,8 @@ namespace Bookish.Net
 {
     public class Book
     {
-        public int Book_ID { get; set; }
-        public string Book_Name { get; set; }
+        public int BookID { get; set; }
+        public string BookName { get; set; }
         public string Bardcode { get; set; }
         public int ISBN { get; set; }
         public string Author { get; set; }

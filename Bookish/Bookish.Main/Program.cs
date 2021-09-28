@@ -11,10 +11,10 @@ namespace Bookish.Main
             BookRepository boooooook = new BookRepository();
             foreach (var book in boooooook.GetAllBooks())
             { 
-                Console.WriteLine(book.Book_Name);
+                Console.WriteLine(book.BookName);
             }
 
-            Console.ReadLine();
+            
         }
     }
 }

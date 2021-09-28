@@ -17,10 +17,10 @@ namespace Bookish.Net
             // sort in to aplha
             return Connection.Query<Book>("SELECT * FROM Books");
         }
-        public IEnumerable<Book> GetAllUserCopies(int UserID)
+        public IEnumerable<Copy> GetAllUserCopies(int UserID)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
-            return Connection.Query<Book>($"SELECT * FROM Copies WHERE UserID = {UserID}");
+            return Connection.Query<Copy>($"SELECT * FROM Copies WHERE UserID = {UserID}");
         }
         public IEnumerable<Book> SearchForBooks(string Search)
         {
@@ -28,13 +28,13 @@ namespace Bookish.Net
             // change or statement
             return Connection.Query<Book>($"SELECT * FROM Books WHERE Author CONTAINS {Search} OR Book_Name CONTAINS {Search}");
         }
-        public IEnumerable<Copy> AllCopies(int Book_ID)
+        public IEnumerable<Copy> AllCopies(int BookID)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
             // find out how many copies
             // number of copies without a userID
             // copies with a user ID, get date due to return and username
-            return Connection.Query<Copy>($"SELECT * FROM Copies WHERE BookID = {Book_ID}");
+            return Connection.Query<Copy>($"SELECT * FROM Copies WHERE BookID = {BookID}");
         }
 
 

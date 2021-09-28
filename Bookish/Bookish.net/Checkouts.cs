@@ -11,6 +11,6 @@ namespace Bookish.net
         public int CheckoutID { get; set; }
         public int UserID { get; set; }
         public int CopyID { get; set; }
-        public DateTime Due_Date_Return { get; set; }
+        public DateTime DueDateReturn { get; set; }
     }
 }
