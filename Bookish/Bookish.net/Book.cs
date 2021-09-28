@@ -11,7 +11,7 @@ namespace Bookish.Net
         public int BookID { get; set; }
         public string BookName { get; set; }
         public string Bardcode { get; set; }
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
         public string Author { get; set; }
 
     }
