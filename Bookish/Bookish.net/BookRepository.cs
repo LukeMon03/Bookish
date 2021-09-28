@@ -31,7 +31,7 @@ namespace Bookish.Net
         public IEnumerable<Copy> AllCopies(int Book_ID)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
-            // find out how many copies
+            // find out how many copies h
             // number of copies without a userID
             // copies with a user ID, get date due to return and username
             return Connection.Query<Copy>($"SELECT * FROM Copies WHERE BookID = {Book_ID}");
