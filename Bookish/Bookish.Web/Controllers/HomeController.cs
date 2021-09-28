@@ -36,5 +36,13 @@ namespace Bookish.Web.Controllers
            
             return View(allBooks);
         }
+        public ActionResult ()
+        {
+            ViewBag.Message = "Your catalogue page.";
+            var booksRepository = new BookRepository();
+            var allBooks = booksRepository.GetAllBooks();
+
+            return View(allBooks);
+        }
     }
 }
