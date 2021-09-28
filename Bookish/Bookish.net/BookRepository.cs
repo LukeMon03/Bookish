@@ -31,7 +31,7 @@ namespace Bookish.Net
         public IEnumerable<Copy> AllCopies(int BookID)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
-            // find out how many copies h
+            // find out how many copies
             // number of copies without a userID
             // copies with a user ID, get date due to return and username
             return Connection.Query<Copy>($"SELECT * FROM Copies WHERE BookID = {BookID}");
@@ -39,10 +39,12 @@ namespace Bookish.Net
 
 
 
-        public IEnumerable<Book> AddBook(int BookID, string BookName, string Barcode, int ISBN, string Author)
+        public int AddBook(string BookName, string Barcode, int ISBN, string Author)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
-            return Connection.Query<Book>($"INSERT ({BookID}, {BookName}, {Barcode}, {ISBN}, {Author}) INTO Books");
+            // add barcode
+            return Connection.QuerySingle<int>($"INSERT INTO Books(BookName, Author, ISBN) VALUES({BookName}, {Author}, {ISBN}); SELECT SCOPE_IDENTITY()");
+            
         }
         
     }

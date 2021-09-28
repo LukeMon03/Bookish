@@ -14,6 +14,11 @@ namespace Bookish.Main
                 Console.WriteLine(book.BookName);
             }
 
+
+            foreach (Copy coopy in boooooook.GetAllUserCopies(1)) 
+            {
+                Console.WriteLine(coopy.CopyID);
+            }
             
         }
     }

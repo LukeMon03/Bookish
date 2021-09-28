@@ -1,0 +1,33 @@
+﻿@using Bookish.Net;
+
+
+@model IEnumerable<Book>
+
+@{
+    ViewBag.Title = "Catalogue";
+
+
+}
+
+<h2>Catalogue</h2>
+<table style="border:1px solid black; width: 100%">
+    
+    @foreach (Book book in Model)
+    {
+        
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+    </tr>
+    <tr style="background-color:red">
+        <td>@book.BookName</td>
+        <td>@book.Author</td>
+        <td>@book.ISBN</td>
+    </tr>
+            }
+        
+    </table>
+
+
+

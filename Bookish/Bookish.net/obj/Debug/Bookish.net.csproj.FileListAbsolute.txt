@@ -2,11 +2,11 @@ C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\Bookish.net.dll.config
 C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\Bookish.net.dll
 C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\Bookish.net.pdb
 C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\Dapper.dll
+C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\System.Data.SqlClient.dll
 C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\Dapper.xml
-C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.net.csproj.CoreCompileInputs.cache
-C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.net.csproj.CopyComplete
+C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\System.Data.SqlClient.xml
+C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.Net.csproj.AssemblyReference.cache
+C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.Net.csproj.CoreCompileInputs.cache
+C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.Net.csproj.CopyComplete
 C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.net.dll
 C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.net.pdb
-C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\System.Data.SqlClient.dll
-C:\Work\Bookish\Bookish\Bookish.net\bin\Debug\System.Data.SqlClient.xml
-C:\Work\Bookish\Bookish\Bookish.net\obj\Debug\Bookish.net.csproj.AssemblyReference.cache
