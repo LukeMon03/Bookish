@@ -57,3 +57,54 @@ INSERT INTO Books(BookName,Author,ISBN) VALUES ('Web Design in a Nutshell','Jenn
 INSERT INTO Books(BookName,Author,ISBN) VALUES ('Unix in a Nutshell','Arnold Robbins','596100299');
 INSERT INTO Books(BookName,Author,ISBN) VALUES ('PHP in a Nutshell','Paul Hudson,  Paul Hudson','596100671');
 
+
+USE bookish_dataBase;
+INSERT INTO Users(UserName) VALUES ('Bill');
+INSERT INTO Users(UserName) VALUES ('Bob');
+INSERT INTO Users(UserName) VALUES ('Bopper');
+INSERT INTO Users(UserName) VALUES ('Terry');
+INSERT INTO Users(UserName) VALUES ('Cat');
+INSERT INTO Users(UserName) VALUES ('KittyCatOnABike');
+INSERT INTO Users(UserName) VALUES ('Randy');
+
+USE bookish_dataBase;
+INSERT INTO Copies( BookID) VALUES('1');
+INSERT INTO Copies( BookID) VALUES('1');
+INSERT INTO Copies( BookID) VALUES('1');
+INSERT INTO Copies( BookID) VALUES('1');
+INSERT INTO Copies( BookID) VALUES('1');
+INSERT INTO Copies(UserID, BookID) VALUES('2','1');
+INSERT INTO Copies(UserID, BookID) VALUES('5','1');
+INSERT INTO Copies(UserID, BookID) VALUES('3','1');
+INSERT INTO Copies(UserID, BookID) VALUES('1','1');
+
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies( BookID) VALUES('2');
+INSERT INTO Copies(UserID, BookID) VALUES('5','2');
+INSERT INTO Copies(UserID, BookID) VALUES('3','2');
+INSERT INTO Copies(UserID, BookID) VALUES('6','2');
+
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies( BookID) VALUES('3');
+INSERT INTO Copies(UserID, BookID) VALUES('1','3');
+INSERT INTO Copies(UserID, BookID) VALUES('6','3');
+
+USE bookish_dataBase;
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('6','2','3/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('7','5','3/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('8','3','2/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('9','1','15/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('16','5','2/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('17','3','7/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('18','6','5/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('26','1','1/10/21');
+INSERT INTO Checkouts(CopyID, UserID, DueDateReturn) VALUES('27','6','7/10/21');

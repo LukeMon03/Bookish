@@ -28,6 +28,7 @@ namespace Bookish.Net
             // change or statement
             return Connection.Query<Book>($"SELECT * FROM Books WHERE Author CONTAINS {Search} OR Book_Name CONTAINS {Search}");
         }
+        //AHH do this
         public IEnumerable<Copy> AllCopies(int BookID)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
