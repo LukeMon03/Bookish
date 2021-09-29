@@ -1,4 +1,5 @@
 ﻿using Bookish.Net;
+using Bookish.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,16 +38,18 @@ namespace Bookish.Web.Controllers
            
             return View(allBooks);
         }
-        //requires input - maybe wait- need to add form
-        public ActionResult Search()
-        {
-            ViewBag.Message = "search";
-            var booksRepository = new BookRepository();
-            var searchbook = booksRepository.SearchForBooks("");
 
-            return View(searchbook);
+        [HttpPost]
+        public ActionResult Catalogue(SearchData searchData)
+        {
+            var bookRepository = new BookRepository();
+            var searchbooks = bookRepository.SearchForBooks(searchData.SearchText);
+
+            return View(searchbooks);
         }
+
         //This is needed for the homepage
+        
         public ActionResult GetAllUserCopies()
         {
             ViewBag.Message = "get all borrowed copies";
@@ -57,6 +60,7 @@ namespace Bookish.Web.Controllers
 
             return View(getcopies);
         }
+        
         /*
         public ActionResult GetAllUserCopies()
         {
