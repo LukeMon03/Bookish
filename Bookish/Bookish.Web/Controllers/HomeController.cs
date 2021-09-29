@@ -36,6 +36,7 @@ namespace Bookish.Web.Controllers
            
             return View(allBooks);
         }
+        /*
         public ActionResult ()
         {
             ViewBag.Message = "Your catalogue page.";
@@ -44,5 +45,6 @@ namespace Bookish.Web.Controllers
 
             return View(allBooks);
         }
+        */
     }
 }
