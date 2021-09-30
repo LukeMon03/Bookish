@@ -11,7 +11,7 @@ namespace Bookish.Net
         {
             SqlConnection Connection = new SqlConnection(connectionString);
             // sort in to aplha
-            return Connection.Query<Book>("SELECT * FROM Books");
+            return Connection.Query<Book>("SELECT * FROM Books").OrderBy(book => book.BookName);
         }
         public IEnumerable<Copy> GetAllUserCopies(int UserID)
         {
