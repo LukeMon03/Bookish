@@ -1,10 +1,6 @@
-﻿using System;
+﻿using Dapper;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using Dapper;
 
 namespace Bookish.Net
 {
@@ -22,12 +18,13 @@ namespace Bookish.Net
             SqlConnection Connection = new SqlConnection(connectionString);
             return Connection.Query<Copy>($"SELECT * FROM Copies WHERE UserID = {UserID}");
         }
-        public IEnumerable<Book> SearchForBooks(string Search)
+        public IEnumerable<Book> SearchForBooks(string SearchText)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
-            // change or statement
-            return Connection.Query<Book>($"SELECT * FROM Books WHERE Author CONTAINS {Search} OR Book_Name CONTAINS {Search}");
+            
+            return Connection.Query<Book>($"SELECT * FROM Books WHERE BookName LIKE '%{SearchText}%' OR Author LIKE '%{SearchText}%'");
         }
+        
         //AHH do this
         public IEnumerable<Copy> AllCopies(int BookID)
         {
