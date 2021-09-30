@@ -35,7 +35,6 @@ namespace Bookish.Web.Controllers
             ViewBag.Message = "Your catalogue page.";
             var booksRepository = new BookRepository();
             var allBooks = booksRepository.GetAllBooks();
-           
             return View(allBooks);
         }
 
@@ -62,7 +61,14 @@ namespace Bookish.Web.Controllers
 
             return View(getcopies);
         }
-        
+        public ActionResult AddBook()
+        {
+            ViewBag.Message = "Your catalogue page.";
+            var booksRepository = new BookRepository();
+            var allBooks = booksRepository.GetAllBooks();
+            return View(allBooks);
+        }
+
         /*
         public ActionResult GetAllUserCopies()
         {
