@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Bookish.Net
 {
