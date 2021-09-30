@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Bookish.Net
 {
@@ -37,7 +38,7 @@ namespace Bookish.Net
 
 
 
-        public int AddBook(string BookName, string Barcode, int ISBN, string Author)
+        public int AddBook(string BookName, string ISBN, string Author)
         {
             SqlConnection Connection = new SqlConnection(connectionString);
             // add barcode

@@ -35,7 +35,7 @@ namespace Bookish.Web.Controllers
             ViewBag.Message = "Your catalogue page.";
             var booksRepository = new BookRepository();
             var allBooks = booksRepository.GetAllBooks();
-           
+
             return View(allBooks);
         }
 
@@ -49,27 +49,33 @@ namespace Bookish.Web.Controllers
         }
 
         //This is needed for the homepage
-        
+
+        public ActionResult AddBook()
+        {
+            ViewBag.Message = "Add a book";
+            return View("");
+        }
+        [HttpPost]
+        public ActionResult AddBook(BookData bookData)
+        {
+            
+            ViewBag.Message = "Add a book";
+            var booksRepository = new BookRepository();
+            booksRepository.AddBook(bookData.BookName, bookData.ISBN, bookData.Author);
+            
+            return View("");
+        }
         public ActionResult GetAllUserCopies()
         {
             ViewBag.Message = "get all borrowed copies";
             var booksRepository = new BookRepository();
             // based on userid 
             int Kangaroo = 10000000;
-            var getcopies = booksRepository.GetAllUserCopies(Kangaroo); 
+            var getcopies = booksRepository.GetAllUserCopies(Kangaroo);
 
             return View(getcopies);
         }
-        
-        /*
-        public ActionResult GetAllUserCopies()
-        {
-            ViewBag.Message = "get all borrowed copies";
-            var booksRepository = new BookRepository();
-            var getcopies = booksRepository.GetAllUserCopies(); //so vwhat goes here
 
-            return View(getcopies);
-        }
-        */
+
     }
 }
